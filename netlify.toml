@@ -1,0 +1,6 @@
+[[redirects]]
+  from = "/api"
+  to = "https://cdn-api.co-vin.in/api/v2"
+  status = 200
+  force = true # COMMENT: ensure that we always redirect
+  headers = {X-From = "Netlify"}
