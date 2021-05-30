@@ -1,0 +1,35 @@
+<div class="container-fluid">
+  <form
+    novalidate
+    autocomplete="off"
+    [formGroup]="searchByPINForm"
+    (ngSubmit)="onFormSubmit()"
+    class="row"
+  >
+    <mat-form-field appearance="fill" class="col-12 mb-2">
+      <input
+        matInput
+        formControlName="pincode"
+        maxlength="10"
+        placeholder="Enter your PIN"
+      />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Choose a date</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="date" />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <button
+      mat-raised-button
+      color="accent"
+      type="submit"
+      [disabled]="!searchByPINForm.valid"
+      class="col-12 mt-2"
+    >
+      Search
+    </button>
+  </form>
+</div>

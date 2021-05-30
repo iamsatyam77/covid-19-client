@@ -1,2 +1,12 @@
-<p>App component loaded</p>
+<mat-toolbar color="primary">
+  <mat-toolbar-row class="d-flex justify-content-between">
+    <span>Covid-19 Vaccine Info</span>
+    <!-- <button mat-icon-button>
+      <mat-icon>menu</mat-icon>
+    </button> -->
+    <button mat-raised-button color="accent" (click)="openDialog()">
+      Login/Register
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
 <router-outlet></router-outlet>
